@@ -5,24 +5,225 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="shortcut icon" href="https://lacrymosa.infini.fr/img/favicon.ico">
 <link rel="stylesheet" type="text/css" href="https://lacrymosa.infini.fr/css/reset.min.css">
+<link rel="stylesheet" type="text/css" href="https://lacrymosa.infini.fr/css/farbtastic.css">
 <link rel="stylesheet" type="text/css" href="https://lacrymosa.infini.fr/css/main.css">
+<link rel="stylesheet" type="text/css" href="https://lacrymosa.infini.fr/css/glue.css">
+<link rel="stylesheet" type="text/css" href="https://lacrymosa.infini.fr/css/edit.css">
+<link rel="stylesheet" type="text/css" href="https://lacrymosa.infini.fr/modules/download/download.css">
+<link rel="stylesheet" type="text/css" href="https://lacrymosa.infini.fr/modules/iframe/iframe-edit.css">
+<link rel="stylesheet" type="text/css" href="https://lacrymosa.infini.fr/modules/page/page-edit.css">
+<link rel="stylesheet" type="text/css" href="https://lacrymosa.infini.fr/modules/text/text-edit.css">
+<link rel="stylesheet" type="text/css" href="https://lacrymosa.infini.fr/modules/video/video-edit.css">
+<link rel="stylesheet" type="text/css" href="https://lacrymosa.infini.fr/modules/webvideo/webvideo-edit.css">
+<style type="text/css">
+	@font-face {
+		font-family: 'LatinModern';
+		font-style: normal;
+		font-weight: normal;
+		src: url(https://lacrymosa.infini.fr/img/lmsans10-regular-webfont.woff) format("woff");
+	}
+	@font-face {
+		font-family: 'LatinModern';
+		font-style: italic;
+		font-weight: normal;
+		src: url(https://lacrymosa.infini.fr/img/lmsans10-oblique-webfont.woff) format("woff");
+	}
+	@font-face {
+		font-family: 'DejaVuSansMono';
+		font-style: italic;
+		font-weight: bold;
+		src: url(https://lacrymosa.infini.fr/img/dejavusansmono-boldoblique-webfont.woff) format("woff");
+	}
+	@font-face {
+		font-family: 'DejaVuSansMono';
+		font-style: normal;
+		font-weight: bold;
+		src: url(https://lacrymosa.infini.fr/img/dejavusansmono-bold-webfont.woff) format("woff");
+	}
+	@font-face {
+		font-family: 'DejaVuSansMono';
+		font-style: italic;
+		font-weight: normal;
+		src: url(https://lacrymosa.infini.fr/img/dejavusansmono-oblique-webfont.woff) format("woff");
+	}
+	@font-face {
+		font-family: 'DejaVuSansMono';
+		font-style: normal;
+		font-weight: normal;
+		src: url(https://lacrymosa.infini.fr/img/dejavusansmono-webfont.woff) format("woff");
+	}
+	@font-face {
+		font-family: 'DejaVuSerif';
+		font-style: italic;
+		font-weight: bold;
+		src: url(https://lacrymosa.infini.fr/img/dejavuserif-bolditalic-webfont.woff) format("woff");
+	}
+	@font-face {
+		font-family: 'DejaVuSerif';
+		font-style: normal;
+		font-weight: bold;
+		src: url(https://lacrymosa.infini.fr/img/dejavuserif-bold-webfont.woff) format("woff");
+	}
+	@font-face {
+		font-family: 'DejaVuSerif';
+		font-style: italic;
+		font-weight: normal;
+		src: url(https://lacrymosa.infini.fr/img/dejavuserif-italic-webfont.woff) format("woff");
+	}
+	@font-face {
+		font-family: 'DejaVuSerif';
+		font-style: normal;
+		font-weight: normal;
+		src: url(https://lacrymosa.infini.fr/img/dejavuserif-webfont.woff) format("woff");
+	}
+	@font-face {
+		font-family: 'DejaVuSans';
+		font-style: italic;
+		font-weight: bold;
+		src: url(https://lacrymosa.infini.fr/img/dejavusans-boldoblique-webfont.woff) format("woff");
+	}
+	@font-face {
+		font-family: 'DejaVuSans';
+		font-style: normal;
+		font-weight: bold;
+		src: url(https://lacrymosa.infini.fr/img/dejavusans-bold-webfont.woff) format("woff");
+	}
+	@font-face {
+		font-family: 'DejaVuSans';
+		font-style: italic;
+		font-weight: normal;
+		src: url(https://lacrymosa.infini.fr/img/dejavusans-oblique-webfont.woff) format("woff");
+	}
+	@font-face {
+		font-family: 'DejaVuSans';
+		font-style: normal;
+		font-weight: normal;
+		src: url(https://lacrymosa.infini.fr/img/dejavusans-webfont.woff) format("woff");
+	}
+	@font-face {
+		font-family: 'LatinModern';
+		font-style: italic;
+		font-weight: bold;
+		src: url(https://lacrymosa.infini.fr/img/lmsans10-boldoblique-webfont.woff) format("woff");
+	}
+	@font-face {
+		font-family: 'LatinModern';
+		font-style: normal;
+		font-weight: bold;
+		src: url(https://lacrymosa.infini.fr/img/lmsans10-bold-webfont.woff) format("woff");
+	}
+	.glue-font-woff-DejaVuSans {
+		font-family: 'DejaVuSans';
+	}
+	.glue-font-woff-DejaVuSerif {
+		font-family: 'DejaVuSerif';
+	}
+	.glue-font-woff-LatinModern {
+		font-family: 'LatinModern';
+	}
+	.glue-font-woff-DejaVuSansMono {
+		font-family: 'DejaVuSansMono';
+	}
+</style>
+<script type="text/javascript" src="https://lacrymosa.infini.fr/js/jquery-1.5.2.min.js"></script>
+<script type="text/javascript" src="https://lacrymosa.infini.fr/js/jquery-ui-1.8.6.custom.min.js"></script>
+<script type="text/javascript" src="https://lacrymosa.infini.fr/js/farbtastic.min.js"></script>
+<script type="text/javascript" src="https://lacrymosa.infini.fr/js/jquery.xcolor-1.2.1.min.js"></script>
+<script type="text/javascript" src="https://lacrymosa.infini.fr/js/glue.min.js"></script>
+<script type="text/javascript" src="https://lacrymosa.infini.fr/js/edit.min.js"></script>
+<script type="text/javascript" src="https://lacrymosa.infini.fr/modules/revisions_browser/revisions_browser-edit.min.js"></script>
+<script type="text/javascript" src="https://lacrymosa.infini.fr/modules/video/video-edit.min.js"></script>
+<script type="text/javascript" src="https://lacrymosa.infini.fr/modules/user_code/user_code-edit.min.js"></script>
+<script type="text/javascript" src="https://lacrymosa.infini.fr/modules/transform/transform.min.js"></script>
+<script type="text/javascript" src="https://lacrymosa.infini.fr/modules/text/text-edit.min.js"></script>
+<script type="text/javascript" src="https://lacrymosa.infini.fr/modules/lock/lock.min.js"></script>
+<script type="text/javascript" src="https://lacrymosa.infini.fr/modules/page_browser/page_browser-edit.min.js"></script>
+<script type="text/javascript" src="https://lacrymosa.infini.fr/modules/page/page-edit.min.js"></script>
+<script type="text/javascript" src="https://lacrymosa.infini.fr/modules/object/object-edit.min.js"></script>
+<script type="text/javascript" src="https://lacrymosa.infini.fr/modules/image/image-edit.min.js"></script>
+<script type="text/javascript" src="https://lacrymosa.infini.fr/modules/iframe/iframe-edit.min.js"></script>
+<script type="text/javascript" src="https://lacrymosa.infini.fr/modules/download/download-edit.min.js"></script>
+<script type="text/javascript" src="https://lacrymosa.infini.fr/modules/webvideo/webvideo-edit.min.js"></script>
+<script type="text/javascript">
+	var $ = $ || {};
+	$.glue = $.glue || {};
+	$.glue.base_url = "https:\/\/lacrymosa.infini.fr\/";
+	$.glue.conf = $.glue.conf || {};
+	$.glue.conf.image = $.glue.conf.image || {};
+	$.glue.conf.image.resizing = true;
+	$.glue.conf.image.upload_resize_larger = "120%";
+	$.glue.conf.image.upload_resize_to = "80%";
+	$.glue.conf.object = $.glue.conf.object || {};
+	$.glue.conf.object.default_colors = ["#61b9cf","#ff00ff","#ffff00"];
+	$.glue.conf.page = $.glue.conf.page || {};
+	$.glue.conf.page.default_grid_x = 50;
+	$.glue.conf.page.default_grid_y = 50;
+	$.glue.conf.page.guides_x = [];
+	$.glue.conf.page.guides_y = [];
+	$.glue.conf.show_frontend_errors = true;
+	$.glue.conf.text = $.glue.conf.text || {};
+	$.glue.conf.text.auto_br = true;
+	$.glue.page = "melacryl.head";
+	$.glue.version = [1,0,4];
+</script>
 <!-- user HEAD definitions -->
 <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAACNloAApKiRAIuagwCRlX0AoK+UAIyagwChr5QAjpiGAJCagwCOm4YAk5iGAJSWiQCQnIkAk5eMAJOZiQCVm4YAk52MAIOFewCWoIwAlKGPAJmgjACXoY8Am6OMAJmkjwCZp48Am6aMAJqnjwCIj34AnqmMAKCnjwCfqJIAoaWSAJ2slQCfq5IAjpGEAI2WgQCPk4EAjZeEAHiHcACPmYEApqmVAI6YhwCQl4QAkJyBAJGYhwCBg20AkJuHAI+figCUnocAkaCNAJOfigCWnIoAk6KKAJWgjQB/kHkAlqKKAJeiigCZo40AmqSQAHN8awCKlnkAnqiTAJ+qkACdrZAAo6iTAKSokwCPloIAjpeFAI6ahQCPmIgAj52FAJKahQCTnIIAkKCFAISEcQCUn4sAlqCOAJmgjgCYpYsAnZ+LAJmjjgCcpo4Am6mOAIaTgwCbqpEAn6iUAJ2slwChrJcAjZmDAIudhgCjrZoApaqaAKWulACPnoAAkZeGAI+ahgCSmYMAkZqGAIKDbwCRnYYAkJyMAIKEcgCRnokAkp6JAJaghgCXnokAmZ2GAJejhgCWoI8Al6OPAIeQewCZp5IAnqqSAIuThAChq5UAjpiBAKOulQCOmYQAjZyEAJGWhACQl4cAj5yEAJCegQCPm4oAkaOHAJWdhwCYmocAk6GKAJyahwCTo5AAmKGKAJWnigCXp4oAmqKNAIeMeQCao5AAmaaQAJynigCaqI0AnqKWAJqqkwCfqI0An6eTAJ2qkwCNkX8An6qTAI2SggChq5YApaqTAI+WhQCNn4UAkZ+FAICFdwCTnosAlKCIAJKhiwCWo4gAl6WFAJmgiACYpYUAlqKOAJmjiACZpIsAm5+OAIWPegCZp4sAmqORAJ2jkQCbppEAiJN9AJynlACLkH0AiJSAAJ6pkQCcqpQAoKeUAKKmkQCKlIkAjZWDAI2WhgCkrJoAlJqJAJWchgCSoIkAl52JAIKLeACWoYwAm6CJAJqkjACYo5IAmqWPAJqmkgCbpJUAnqWPAJ6qjACeqI8An6iPAIyOgQCcqpUAnqmSAJ+pkgCOlXsAn6ySAKOpkgChrJIAjJ2BAKOwlQCRmIQAjpyHAJCchwCRopAAm5+HAJenjQCdoIoAl6iQAJimkwCYqJAAmqiQAJiqlgCMkH8AnKyTAJ2skwChqZMAi5WFAJ6tlgCPnYIAkpiFAJKaiwCUnIgAg4Z0AJmehQCbm4UAk6OLAJidiwCWoIsAmKKIAJqfiACZoY4AmqaLAImLegCIjnoAnKSOAJqnjgCcopEAoaGOAJ2mlACGlIMAnqqOAJ2plACeq5EAn6mUAAAAAAAAAAAAAAAAAAAAAAAAAAAA8tjXGI0W8TqfaDQNRNElKVrW9cHT84ic5ksxyTx2CF1XHlHtZLidfHOaSdsszXpZ+lXua4JPf02y5Ctlklh5SFvCrbqFZ0UwQ0ICOyazIwVA+pQ4tSdxewMiXmJK67u3sJH3os9TuaxxDmGG7xChmxmPAekKMvAkgA9jq5iV0jemVhyHCeyQpFAUBxstC71s1cz5hEdpqeWeUjUubt+ngfTGKEFfd8URRq6gTOKxFcAdIN3I5yp+NrbETmrjdW3odM7KcgwzfQC8yxrhL6OJOd4+P8pgl9D2E9za1Mgfg7+0BPiT6paZeBJwjK+obxfZ4AZcIVQ9vmaLpVLDjseqigAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=" rel="icon" type="image/x-icon">
 </head>
 <body id="melacryl.head" class="page">
-	<div id="melacryl.head.17708178368" class="image resizable object" style="height: 106px; left: 28px; position: absolute; top: 18px; width: 1844px; z-index: 100;">
-		<img src="https://lacrymosa.infini.fr/?melacryl.head.17708178368" alt="" style="border: 0px; height: 100%; margin: 0px; padding: 0px; width: 100%;">
+	<div id="melacryl.head.17708178368" class="image resizable object" style="-moz-background-size: 100% 100%; background-image: url(https://lacrymosa.infini.fr/?melacryl.head.17708178368); background-repeat: no-repeat; background-size: 100% 100%; height: 106px; left: 28px; position: absolute; top: 18px; width: 1844px; z-index: 100;">
 	</div>
 	<!-- user BODY definitions -->
 	<!DOCTYPE html>
 	<html>
+	  <head>
+	    <meta charset="utf-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	  </head>
+	
 	  <body>
 	    <div id="app" style="height: 100vh">
 	      <!-- Webamp will attempt to center itself within this div -->
 	    </div>
 	    <script type="module">
 	      import Webamp from "https://unpkg.com/webamp@^2";
-	      const webamp = new Webamp({});
+	      const webamp = new Webamp({
+	        // Optional. An array of objects representing skins.
+	        // These will appear in the "Options" menu under "Skins".
+	        // NOTE: These URLs must be served with the correct CORs headers.
+	        // https://docs.webamp.org/docs/guides/cors
+	        //
+	        // These will appear in the dropdown menu under "Skins".
+	        availableSkins: [
+	          {
+	            url: "https://archive.org/cors/winampskin_Zelda_Amp/Zelda-Amp.wsz",
+	            name: "Zelda Amp",
+	          },
+	          {
+	            url: "https://archive.org/cors/winampskin_Green-Dimension-V2/Green-Dimension-V2.wsz",
+	            name: "Green Dimension V2",
+	          },
+	          {
+	            url: "https://archive.org/cors/winampskin_mac_os_x_1_5-aqua/mac_os_x_1_5-aqua.wsz",
+	            name: "Mac OSX v1.5 (Aqua)",
+	          },
+	        ],
+	        initialSkin: {
+	          url: "https://github.com/liahkim107/skin/blob/main/Deus_Ex_Amp_by_AJ.wsz",
+	        },
+	        initialTracks: [
+	          {
+	            metaData: {
+	              artist: "DJ Mike Llama",
+	              title: "Llama Whippin' Intro",
+	            },
+	            // NOTE: Your audio file must be served from the same domain as your HTML
+	            // file, or served with permissive CORS HTTP headers:
+	            // https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+	            url: "https://cdn.jsdelivr.net/gh/captbaritone/webamp@43434d82cfe0e37286dbbe0666072dc3190a83bc/mp3/llama-2.91.mp3",
+	            duration: 5.322286,
+	          },
+	        ],
+	      });
 	
 	      // Returns a promise indicating when it's done loading.
 	      webamp.renderWhenReady(document.getElementById("app"));
